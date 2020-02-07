@@ -6,6 +6,7 @@
 #include"ThreadPool.h"
 std::mutex mtx;
 std::condition_variable cv;
+bool turn_on = false;
 
 int num = 0;//share value by producer and consumer，相当于一个信号量,记录队列当中的任务的个数
 SafeQueue<ReadTarget>  safequeue;
@@ -72,6 +73,5 @@ int main()
 
 	ThreadPool tp(8);
 	tp.start();
-	tp.shutdown();
 	return 0;
 }
