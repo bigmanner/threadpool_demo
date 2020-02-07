@@ -1,4 +1,5 @@
 #pragma once
+#include<iostream>
 class ReadTarget//设定为结构体的类型
 {
 private:
